@@ -26,28 +26,29 @@ d3.json("js/state.shapes.json", function(error, counties) {
             });
         });
     });
-
-    /*var state = counties.features.filter(function(st) {
-       return st.properties.STATEFP === 17
-    });*/
+3
+    var stateArray = counties.features.filter(function(st) {
+        return st.properties.STATEFP === "17";
+    });
 
     var width = 1160,
         height = 960;
 
-    //var projection = d3.geo.mercator();
-
-    //var path = d3.geo.path().projection(projection);
-
-    console.log(counties);
+    var state = {
+        type: "FeatureCollection",
+        features: stateArray
+    }
 
     var svg = d3.select("body").append("svg")
         .attr("width", width)
         .attr("height", height);
 
+    console.log(state);
+
     svg.append('g')
         .attr('class', 'counties')
         .selectAll('path')
-        .data(counties.features)
+        .data(state.features)
         .enter().append('path')
         .attr('d', d3.geo.path());
 
