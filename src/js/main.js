@@ -13,7 +13,7 @@ var MarketingMap = (function() {
     return publicAPI;
 })();
 
-d3.json("js/state.shapes.json", function(error, counties) {
+/*d3.json("js/state.shapes.json", function(error, counties) {
     if (error) return console.error(error);
 
     d3.json("js/indie.min.json", function(error, plans) {
@@ -54,4 +54,4 @@ d3.json("js/state.shapes.json", function(error, counties) {
 
 
     //MarketingMap.init({map: counties});
-});
+});*/

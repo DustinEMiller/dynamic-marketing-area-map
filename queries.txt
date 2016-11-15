@@ -1,0 +1,5 @@
+node_modules\.bin\topojson-merge counties.json -o states.json --in-objects=counties --out-object=states key=d.id.substring(0,2)
+
+node_modules\.bin\topojson src\assets\new_states.shp -o counties.json --id-property=STATE+COUNTY,fips --external-properties=src\assets\individual.csv --properties=plans=plans --simplify=.5 -- counties=src\assets\new_states.shp
+
+ogr2ogr -f "ESRI Shapefile" -where "STATE = '17' OR STATE = '18' OR STATE ='19' OR STATE='39' OR STATE = '53'" new_states.shp gz_2010_us_050_00_20m.shp
