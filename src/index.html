@@ -26,8 +26,8 @@
         <script src="js/main.js"></script>
         <script>
             var projection = d3.geo.albersUsa()
-                .scale(4600)
-                .translate([75, 350]);
+                .scale(1550)
+                .translate([35, 114]);
 
             var path = d3.geo.path().projection(projection);
 
@@ -36,8 +36,8 @@
 
                 // make the SVG responsive
                 var el_meshed = elasticSVG("#map", {
-                    width: 900,
-                    aspect: 1,
+                    width: 350,
+                    aspect: 0.45,
                     resize: "auto"
                 });
 
@@ -53,6 +53,7 @@
                 svg_merged.selectAll("path")
                     .data(counties)
                     .enter().append("path")
+
                     .attr("class", "county")
                     .attr("d", path);
 

@@ -179,9 +179,9 @@ textarea {
 }
 
 path.county {
-    fill: #000;
-    stroke: #fff;
-    stroke-width: 2px;
+    fill: #e3e3e3;
+    stroke: #000;
+    stroke-width: .5px;
     stroke-linejoin: round;
     stroke-linecap: round;
 }
@@ -189,7 +189,7 @@ path.county {
 path.state {
     fill: none;
     stroke: #000;
-    stroke-width: 3px;
+    stroke-width: 1px;
     stroke-linejoin: round;
     stroke-linecap: round;
 }
